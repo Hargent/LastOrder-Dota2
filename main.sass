@@ -1,0 +1,180 @@
+@font-face {
+    font-family: "Red-hat";
+    src: url("/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Red-hat-bold";
+    src: url("/Red_Hat_Display/static/RedHatDisplay-ExtraBold.ttf");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Red-Hat;
+    text-align: center;
+}
+
+body {
+    background: url("./images/pattern-background-mobile.svg"), hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* container styles */
+
+.container {
+    -moz-height: fit-content;
+    height: fit-content;
+    max-width: 20rem;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* padding-bottom: 1rem; */
+    display: grid;
+    grid-template-areas: "image""content";
+    box-shadow: 0 12px 4px rgba(0, 0, 0, 0.02);
+}
+
+
+/* image style */
+
+.image__container {
+    grid-area: image;
+}
+
+.image__container img {
+    width: 100%;
+    height: 100%;
+}
+
+.content__container {
+    grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    padding-bottom: 0;
+}
+
+.content__container h2 {
+    font-family: Red-hat-bold;
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
+}
+
+.content__container>p {
+    font-family: inherit;
+    margin: 1rem 0;
+    line-height: 1.5;
+    color: hsl(224, 23%, 55%);
+}
+
+.content__price__container {
+    display: flex;
+    background-color: hsl(225, 100%, 94%, 0.3);
+    justify-content: space-between;
+    height: 5rem;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+}
+
+.content__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__price__container img {
+    height: 3rem;
+    vertical-align: middle;
+}
+
+.content__price__item1 {
+    padding-left: 0.2rem;
+    font-family: Red-hat-bold;
+    color: hsl(223, 47%, 23%);
+}
+
+.content__price__item2 {
+    color: hsl(224, 23%, 55%);
+}
+
+.price__change__btn {
+    cursor: pointer;
+    background-color: hsl(225, 100%, 94%, 0.3);
+    border: none;
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+    font-family: Red-hat-bold;
+    margin-left: 2rem;
+    font-weight: 700;
+}
+
+.payment__btn {
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 94%);
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 0.89rem 3px rgba(211, 212, 248, 0.35);
+    width: 100%;
+    font-family: Red-hat-bold;
+    font-size: 1rem;
+    border: none;
+}
+
+.cancel__btn {
+    border: none;
+    font-size: 1rem;
+    background-color: #fff;
+    color: hsl(224, 23%, 55%);
+    font-family: Red-hat-bold;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.cancel__btn:hover,
+.cancel__btn:active {
+    color: hsl(223, 47%, 23%);
+}
+
+.price__change__btn:hover,
+.price__change__btn:active {
+    text-decoration: none;
+    color: hsl(245, 78%, 71%);
+}
+
+.payment__btn:hover,
+.payment__btn:active {
+    background-color: hsl(245, 78%, 71%);
+}
+
+@media (min-width: 40rem) {
+    body {
+        background: url("./images/pattern-background-desktop.svg"), hsl(225, 100%, 94%);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    html {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        outline: 1px solid red;
+    }
+}
